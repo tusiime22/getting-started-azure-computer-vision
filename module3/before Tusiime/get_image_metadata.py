@@ -11,6 +11,6 @@ subscription_key = os.environ["AZURE_COMPUTER_VISION_SUBSCRIPTION_KEY"]
 endpoint = os.environ["AZURE_COMPUTER_VISION_ENDPOINT"]
 
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
-image_url = "https://www.shutterstock.com/image-photo/sea-turtle-gracefully-navigating-turquoise-waters-2407352865"
+image_url = "https://www.shutterstock.com/shutterstock/photos/2407352865/display_1500/stock-photo-a-sea-turtle-gracefully-navigating-the-turquoise-waters-of-island-the-unique-shell-patterns-of-the-2407352865.jpg"
 described_response = computervision_client.describe_image(image_url, max_candidates=1)
 print(described_response)
